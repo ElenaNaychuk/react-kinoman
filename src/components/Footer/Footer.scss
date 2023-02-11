@@ -1,0 +1,37 @@
+@import './../../../src/styles/vars.scss';
+
+@font-face {
+    font-family: 'Exo2.0';
+    src: url(./../../../src/assets/fonts/Exo2.0-Thin.otf) format('opentype');
+}
+
+@mixin font($weight, $size, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+.footer {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background: $darkGray;
+
+    .footer__logo-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .footer__title {
+            @include font($normal, $font-30, $white)
+        }
+
+        .footer__title_orange {
+            @include font($normal, $font-30, $orange)
+        }
+    }
+}

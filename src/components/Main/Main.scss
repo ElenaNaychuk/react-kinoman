@@ -1,0 +1,8 @@
+@import './../../../src/styles/vars.scss';
+
+.main-container {
+    min-height: 1500px;
+    background: $gray;
+    background: url(./../../../src/assets/images/zheleznyj-chelovek.png) no-repeat $gray;
+    background-position-x: center;
+}

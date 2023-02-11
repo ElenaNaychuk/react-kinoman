@@ -1,0 +1,90 @@
+@import './../../../src/styles/vars.scss';
+
+@font-face {
+    font-family: 'Exo2.0';
+    src: url(./../../../src/assets/fonts/Exo2.0-Thin.otf) format('opentype');
+}
+
+@mixin font($weight, $size, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+.header__container {
+    min-height: 210px;
+    background: $gray;
+
+    .header {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $darkGray;
+        padding: 0 50px;
+
+        .header__logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .header__title {
+                @include font($normal, $font-30, $white)
+            }
+
+            .header__title_orange {
+                @include font($normal, $font-30, $orange)
+            }
+        }
+
+        .header__search-container {
+            position: relative;
+
+            .header__input-search {
+                width: 380px;
+                height: 60px;
+                padding-left: 10px;
+                background: $black;
+                border-radius: 10px;
+                border: 1px solid $white;
+                @include font($light, $font-20, $white)
+            }
+
+            .header__btn {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                width: 100px;
+                height: 40px;
+                background: $orange;
+                border-radius: 10px;
+                cursor: pointer;
+                @include font($light, $font-20, $white)
+            }
+        }
+    }
+
+    .header__nav-container {
+        margin: 30px;
+        height: 60px;
+        line-height: 60px;
+        background: $darkGray;
+
+        .header__nav {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            @include font($normal, $font-20, $white)
+        }
+
+        li:first-child {
+            color: $orange;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+    }
+}
