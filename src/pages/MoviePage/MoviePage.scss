@@ -1,0 +1,109 @@
+@import './../../../src/styles/vars.scss';
+
+@font-face {
+    font-family: 'Exo2.0';
+    src: url(./../../../src/assets/fonts/Exo2.0-Thin.otf) format('opentype');
+}
+
+@mixin font($weight, $size, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+.moviePage__container {
+    background: $darkGray;
+    padding: 100px;
+    min-height: 100vh;
+
+    .moviePage__img_back {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+    }
+
+    .moviePage__wrapper {
+        max-width: 1440px;
+        display: flex;
+        justify-content: center;
+
+        .item {
+            padding: 0 0 40px 80px;
+        }
+
+        .moviePage__img {
+            width: 500px;
+            height: 700px;
+            object-fit: cover;
+        }
+
+        .moviePage__movie-data {
+            @include font($normal, $font-30, $white);
+
+            .orange {
+                color: $orange;
+            }
+        }
+    }
+
+    .moviePage__description {
+        padding: 40px;
+        @include font($normal, $font-30, $white);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1227px) {
+    .moviePage__container {
+        padding: 60px;
+
+        .moviePage__wrapper {
+            display: flex;
+
+            .item {
+                padding: 0 0 30px 60px;
+            }
+
+            .moviePage__img {
+                width: 260px;
+                height: 460px;
+            }
+
+            .moviePage__movie-data {
+                @include font($normal, $font-28, $white)
+            }
+        }
+
+        .moviePage__description {
+            padding: 30px;
+            @include font($normal, $font-28, $white)
+        }
+
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .moviePage__container {
+        padding: 30px;
+
+
+        .moviePage__wrapper {
+            display: flex;
+
+            .item {
+                padding: 0 0 30px 30px;
+                @include font($normal, $font-20, $white)
+            }
+
+            .moviePage__img {
+                width: 260px;
+                height: 460px;
+            }
+        }
+
+        .moviePage__description {
+            padding: 30px;
+            @include font($normal, $font-20, $white)
+        }
+    }
+}

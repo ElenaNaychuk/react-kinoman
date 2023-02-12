@@ -1,0 +1,47 @@
+@import './../../../src/styles/vars.scss';
+
+@font-face {
+    font-family: 'Exo2.0';
+    src: url(./../../../src/assets/fonts/Exo2.0-Thin.otf) format('opentype');
+}
+
+@mixin font($weight, $size, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+.movieCard__container {
+    display: grid;
+    grid-template-rows: 6fr, 1fr, 1fr, 1fr;
+    width: 244px;
+    height: 464px;
+    background: $darkGray;
+    padding: 10px;
+    text-decoration: none;
+
+    .movieCard__img {
+        grid-row: 1/2;
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+    }
+
+    .movieCard__title,
+    .movieCard__rating,
+    .movieCard__type {
+        text-align: center;
+        @include font($normal, $font-20, $white)
+    }
+
+    .movieCard__rating_orange {
+        color: $orange;
+    }
+}
+
+.movieCard__container:hover {
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+    box-shadow: 0.3em 0.3em 2em $white;
+}

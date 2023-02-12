@@ -1,0 +1,18 @@
+@import './../../../src/styles/vars.scss';
+
+.movieList__container-loading {
+    background: $white;
+}
+
+.movieList__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 34px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    // .movieList__container {
+    // justify-content: space-between;
+    // }
+}
