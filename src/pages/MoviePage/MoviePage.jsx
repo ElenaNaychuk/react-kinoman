@@ -15,11 +15,11 @@ function MoviePage({ movieStore }) {
     }, [id]);
 
     if (movieStore.serverError) {
-        return <p>Ошибка загрузки...</p>;
+        return <p className='moviePage__error'>Ошибка загрузки...</p>;
     }
 
     if (movieStore.isLoading()) {
-        return <p className='movieList__container-loading'>Loading ...</p>;
+        return <p className='moviePage__container-loading'>Loading ...</p>;
     }
 
     return (

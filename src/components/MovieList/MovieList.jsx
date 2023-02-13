@@ -6,7 +6,7 @@ import './MovieList.scss';
 function MovieList({ moviesStore }) {
 
     if (moviesStore.serverError) {
-        return <p>Ошибка загрузки...</p>;
+        return <p className='movieList__error'>Ошибка загрузки...</p>;
     }
 
     if (moviesStore.isLoading()) {
@@ -16,7 +16,7 @@ function MovieList({ moviesStore }) {
     return (
         < section className='movieList__container' >
             {
-                moviesStore.movies.items.map((movie) =>
+                moviesStore.movies.map((movie) =>
                     < MovieCard
                         key={movie.kinopoiskId}
                         id={movie.kinopoiskId}

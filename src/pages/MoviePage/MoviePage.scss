@@ -12,7 +12,14 @@
     color: $color;
 }
 
-.movieList__container-loading {
+.moviePage__error {
+    text-align: center;
+    padding: 30px;
+    background: $gray;
+    @include font($bold, $font-60, $white);
+}
+
+.moviePage__container-loading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +108,12 @@
 }
 
 @media screen and (min-width: 360px) and (max-width: 767px) {
+
+    .moviePage__error {
+        padding: 10px;
+        @include font($bold, $font-40, $white);
+    }
+
     .moviePage__container {
         padding: 30px;
 

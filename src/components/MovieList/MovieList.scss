@@ -13,9 +13,16 @@
 }
 
 .movieList__container-loading {
-    display: flex;
-    align-items: flex-start;
     text-align: center;
+    padding: 30px;
+    background: $gray;
+    @include font($bold, $font-60, $white);
+}
+
+.movieList__error {
+    text-align: center;
+    padding: 30px;
+    background: $gray;
     @include font($bold, $font-60, $white);
 }
 
@@ -27,6 +34,12 @@
 }
 
 @media screen and (min-width: 360px) and (max-width: 767px) {
+
+    .movieList__error {
+        padding: 10px;
+        @include font($bold, $font-40, $white);
+    }
+
     // .movieList__container {
     // justify-content: space-between;
     // }
