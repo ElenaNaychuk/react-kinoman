@@ -16,7 +16,7 @@
     display: grid;
     grid-template-rows: 6fr, 1fr, 1fr, 1fr;
     width: 244px;
-    height: 464px;
+    min-height: 464px;
     background: $darkGray;
     padding: 10px;
     text-decoration: none;

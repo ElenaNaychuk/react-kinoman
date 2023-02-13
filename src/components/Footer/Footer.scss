@@ -35,3 +35,29 @@
         }
     }
 }
+
+@media screen and (min-width: 359px) and (max-width: 767px) {
+    .footer {
+        height: auto;
+        display: block;
+        padding: 10px;
+        background: $darkGray;
+        text-align: center;
+
+        .footer__logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 10px;
+
+            .footer__title {
+                @include font($normal, $font-30, $white)
+            }
+
+            .footer__title_orange {
+                @include font($normal, $font-30, $orange)
+            }
+        }
+    }
+}
