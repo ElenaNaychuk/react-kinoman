@@ -1,5 +1,4 @@
 import axios from "axios";
-
 class MoviesRepository {
     constructor(baseUrl) {
         this.baseUrl = baseUrl;
@@ -23,10 +22,6 @@ class MoviesRepository {
                 'X-API-KEY': 'f7efb526-5a19-4099-8eef-9da6a6a06d58',
                 'Content-Type': 'application/json',
             },
-            // params: {
-            //   page: 1,
-            //   keyword: "удача",
-            // },
         });
         return response.data;
     }
@@ -55,7 +50,5 @@ class MoviesRepository {
         });
         return response.data.films;
     }
-
-
 }
 export default MoviesRepository

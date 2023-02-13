@@ -1,9 +1,7 @@
-import { observer, inject } from "mobx-react";
-
 import MovieList from '../MovieList/MovieList';
 import './Main.scss';
 
-function Main({ moviesStore }) {
+function Main() {
 
     return (
         <main className='main-container'>
@@ -12,7 +10,4 @@ function Main({ moviesStore }) {
     )
 }
 
-export default inject((store) => {
-    const { moviesStore } = store;
-    return { moviesStore }
-})(observer(Main));
+export default Main;

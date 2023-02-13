@@ -2,7 +2,6 @@ import { makeAutoObservable } from "mobx";
 import MoviesRepository from "./../MoviesRepository.js";
 
 const baseUrl = 'https://kinopoiskapiunofficial.tech/api/v2.2/films';
-
 const moviesRepository = new MoviesRepository(baseUrl);
 
 export default class MoviesStore {

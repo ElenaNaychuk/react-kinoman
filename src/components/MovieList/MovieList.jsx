@@ -1,5 +1,4 @@
 import { observer, inject } from "mobx-react";
-
 import MovieCard from '../MovieCard/MovieCard';
 import './MovieList.scss';
 

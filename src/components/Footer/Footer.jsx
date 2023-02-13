@@ -13,7 +13,6 @@ function Footer() {
                 <img className='footer__logo' src={logoFooter} alt="logo" />
             </div>
         </footer>
-
     );
 }
 

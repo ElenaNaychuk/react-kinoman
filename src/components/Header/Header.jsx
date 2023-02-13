@@ -1,7 +1,7 @@
-import './Header.scss';
-import logo from './../../../src/assets/images/icon-logo.png'
 import { useState } from 'react';
 import { observer, inject } from "mobx-react";
+import logo from './../../../src/assets/images/icon-logo.png';
+import './Header.scss';
 
 function Header({ moviesStore }) {
 
@@ -33,7 +33,9 @@ function Header({ moviesStore }) {
             <div className='header'>
                 <div className='header__logo-container'>
                     <img className='header__logo' src={logo} alt="logo" />
-                    <p className='header__title'>Кино<span className='header__title_orange'>Ман</span></p>
+                    <p className='header__title'>
+                        Кино<span className='header__title_orange'>Ман</span>
+                    </p>
                 </div>
                 <div className='header__search-container'>
                     <input

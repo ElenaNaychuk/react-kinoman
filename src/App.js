@@ -6,8 +6,6 @@ import MainPage from './../src/pages/MainPage/MainPage.jsx';
 import ErrorPage from './../src/pages/ErrorPage/ErrorPage.jsx';
 import MoviePage from './../src/pages/MoviePage/MoviePage.jsx';
 
-import './App.css';
-
 function App({ moviesStore }) {
 
     useEffect(() => { moviesStore.loadAllMovies() }, []);
