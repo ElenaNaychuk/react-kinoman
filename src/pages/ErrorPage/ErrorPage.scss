@@ -1,0 +1,41 @@
+@import './../../../src/styles/vars.scss';
+
+@font-face {
+    font-family: 'Exo2.0';
+    src: url(./../../../src/assets/fonts/Exo2.0-Thin.otf) format('opentype');
+}
+
+@mixin font($weight, $size, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+.errorPage__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: $gray;
+
+    .errorPage__wrapper {
+        text-align: center;
+        height: 100%;
+
+        .errorPage__title {
+            padding-bottom: 20px;
+            @include font($bold, $font-60, $white);
+        }
+
+        .errorPage__message {
+            padding-bottom: 20px;
+            @include font($bold, $font-40, $white);
+
+            .errorPage__link {
+                @include font($bold, $font-40, $orange);
+            }
+        }
+    }
+}

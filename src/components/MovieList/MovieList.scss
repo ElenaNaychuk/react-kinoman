@@ -1,7 +1,22 @@
 @import './../../../src/styles/vars.scss';
 
+@font-face {
+    font-family: 'Exo2.0';
+    src: url(./../../../src/assets/fonts/Exo2.0-Thin.otf) format('opentype');
+}
+
+@mixin font($weight, $size, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
 .movieList__container-loading {
-    background: $white;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    @include font($bold, $font-60, $white);
 }
 
 .movieList__container {

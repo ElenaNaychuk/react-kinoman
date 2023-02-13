@@ -12,15 +12,33 @@
     color: $color;
 }
 
+.movieList__container-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: $gray;
+    @include font($bold, $font-60, $white);
+}
+
 .moviePage__container {
     background: $darkGray;
-    padding: 100px;
+    padding: 200px;
     min-height: 100vh;
 
     .moviePage__img_back {
         position: absolute;
-        top: 20px;
+        top: 50px;
         left: 50px;
+        width: 65px;
+        height: 65px;
+        border: 2px solid $orange;
+        border-radius: 50%;
+    }
+
+    .moviePage__img_back:hover {
+        box-shadow: 0.1em 0.1em 1em $orange;
     }
 
     .moviePage__wrapper {
@@ -55,7 +73,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1227px) {
     .moviePage__container {
-        padding: 60px;
+        padding: 80px;
 
         .moviePage__wrapper {
             display: flex;

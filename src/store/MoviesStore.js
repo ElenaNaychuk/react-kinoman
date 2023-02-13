@@ -16,9 +16,6 @@ export default class MoviesStore {
     }
 
     async loadAllMovies() {
-        if (this.isLoaded()) {
-            return;
-        }
         try {
             this.movies = await moviesRepository.getAllMovies();
         } catch (error) {
