@@ -15,7 +15,6 @@ export default class MoviesStore {
 
     resetMovies() {
         this.movies = undefined;
-        console.log('resetting');
     }
 
     setMovies(movies) {
